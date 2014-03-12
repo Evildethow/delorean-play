@@ -3,18 +3,16 @@
 # ~~~~
 
 # Home page
-GET         /                   @controllers.Application.index
+GET        /                    @controllers.Application.index
 
 # About
-GET         /about              @controllers.Application.about
-GET         /getting_started    @controllers.Application.gettingStarted
+GET        /about               @controllers.Application.about
 
-# Tasks
-GET         /tasks              @controllers.Application.tasks
-POST        /tasks              @controllers.Application.newTask
-POST        /tasks/:id/delete   @controllers.Application.deleteTask(id: Long)
+# Getting Started
+GET        /getting_started     @controllers.Application.gettingStarted
+
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file        controllers.Assets.at(path="/public", file)
+GET        /assets/*file        controllers.Assets.at(path="/public", file)
 
     
